@@ -27,11 +27,11 @@ fetchData();
 let search = 
 document.getElementById("search-input");
 search.addEventListener("keyup", () => {
-    let searchValue = search.value.toUpperCase();
+    let searchValue = search.value.toLowerCase();
     let tbody = document.querySelector("tbody")
     let rows = tbody.querySelectorAll("tr")
     rows.forEach((row) => {
-        let text = row.innerText.toUpperCase()
+        let text = row.innerText.toLowerCase()
         if(text.indexOf(searchValue) == -1) {
             row.style.display = "none"
         } else {
