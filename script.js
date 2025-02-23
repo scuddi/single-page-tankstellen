@@ -1,3 +1,4 @@
+// Fetch of the data from provided link
 
 let tankstellen = [];
 
@@ -10,9 +11,31 @@ async function fetchData() {
     renderTable(tankstellen);
 }
 
+
+// Translation into HTML table
+
 function renderTable(data) {
     const tbody = document.getElementById("tableBody")
     tbody.innerHTML = data.map(t => `<tr><td>${t.adresse}</td></tr>`).join("");
 }
 
 fetchData();
+
+
+// Search functionality
+
+let search = 
+document.getElementById("search-input");
+search.addEventListener("keyup", () => {
+    let searchValue = search.value.toUpperCase();
+    let tbody = document.querySelector("tbody")
+    let rows = tbody.querySelectorAll("tr")
+    rows.forEach((row) => {
+        let text = row.innerText.toUpperCase()
+        if(text.indexOf(searchValue) == -1) {
+            row.style.display = "none"
+        } else {
+            row.style.display = "table-row"
+        }
+    })
+})
