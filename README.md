@@ -55,3 +55,4 @@ Einziges exterenes Tool ist die Library **sorttable.js** zur einfachen auf- und 
     - [ ] Tabelle scrollbar machen, anstatt dass die Seite immer länger wird
     - [ ] Tabellendesign (Zebramuster) dynamisch, also auch bei der Suche
 - [ ] Koordinaten verwenden um die Tankstellen auf einer Karte anzuzeigen (OpenStreetMap)
+- [ ] Header/Navbar und Footer hinzufügen
